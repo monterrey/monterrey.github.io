@@ -9,7 +9,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}></span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
@@ -19,8 +19,18 @@ layout: default
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+<h1 class="page-heading">Projects</h1>
+<ul class="post-list">
   {% for repository in site.github.public_repositories %}
+  <li>
+    <span class="post-meta">{{ repository.date | date: ""%b %-d, %Y"" }}></span>
+    <h2>
+      <a class="post-link" href="{{ repository.html_url | prepend:site.baseurl }}">{{ repository.name | escape }}</a>
+    </h2>
+  </li>
   * [{{ repository.name }}]({{ repository.html_url }})
 {% endfor %}
+</ul>
 
 </div>
