@@ -24,7 +24,7 @@ layout: default
 <ul class="post-list">
   {% for repository in site.github.public_repositories %}
   <li>
-    <span class="post-meta">{{ repository.date | date: ""%b %-d, %Y"" }}></span>
+    <span class="post-meta">{{  date: ""%b %-d, %Y"" }}></span>
     <h2>
       <a class="post-link" href="{{ repository.html_url | prepend:site.baseurl }}">{{ repository.name | escape }}</a>
     </h2>
