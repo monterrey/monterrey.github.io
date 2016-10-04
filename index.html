@@ -10,7 +10,11 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
+<<<<<<< HEAD
 
+=======
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+>>>>>>> refs/remotes/origin/master
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
@@ -25,7 +29,11 @@ layout: default
 <ul class="post-list">
   {% for repository in site.github.public_repositories %}
   <li>
+<<<<<<< HEAD
 
+=======
+    <span class="post-meta">{{  date: ""%b %-d, %Y"" }}</span>
+>>>>>>> refs/remotes/origin/master
     <h2>
       <a class="post-link" href="{{ repository.html_url | prepend:site.baseurl }}">{{ repository.name | escape }}</a>
     </h2>
