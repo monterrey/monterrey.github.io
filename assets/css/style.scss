@@ -1,0 +1,14 @@
+---
+---
+li{
+	list-style-type: none;
+}
+.banner_main{
+	background-image: url(banner_main.png);
+	background-size: cover;
+	color: white;
+}
+.notFound {
+	text-align: center;
+}
+@import "bootstrap"

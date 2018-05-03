@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /404.html
+---
+
+  {% assign custom_url = site.url | append: site.baseurl %}
+  {% assign full_base_url = custom_url | default: site.github.url %}
+<div class="jumbotron container notFound">
+	<h1> #404 </h1>
+	<img src="{{ "/assets/kendrick.jpg" | prepend: full_base_url }}" >
+<h2>
+Page not found! :(
+</h2>
+</div>

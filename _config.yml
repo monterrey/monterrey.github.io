@@ -16,15 +16,17 @@
 title: Monterrey
 email: luis13lopez@live.com
 description: >
-  Personal blog dedicated to documenting my projects
+  Github Pages Website dedicated to my blog and documenting my projects
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://monterrey.github.io" # the base hostname & protocol for your site
-twitter_username: d347hn0d3
+url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+twitter_username: notafashy
 github_username:  monterrey
 
 gems: ['jekyll-github-metadata']
 
+sass:
+  style: compressed
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 repository: monterrey/monterrey.github.io

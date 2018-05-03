@@ -1,0 +1,72 @@
+<script>
+Chart.defaults.global.legend.display = false;
+var rep_name_array = [];
+var repo_json_array = [];
+var langName = [];
+var langBytes = [];
+{% assign count = 0 %}
+{% for repository in site.github.public_repositories %}
+{% assign count = count | plus: 1 %}
+var rep_name = "{{ repository.name | escape }}";
+rep_name_array.push(rep_name);
+var description = "{{ repository.description }}";
+var rep_name_container = "div_"+ rep_name;
+var $canv = $('<canvas/>', {'id': rep_name}).width(200).height(200);
+var $div = $("<div>", {id: rep_name_container, "class":"col-lg-4"});
+var doublear = [];
+$("#proj-display").append($div.append($canv));
+var repo_lang_url = '{{ repository.languages_url }}';
+repo_json_array.push(repo_lang_url);
+
+
+{% endfor %}
+
+
+{% assign count = count | minus: 1 %}
+var cntr = 0;
+{% for i in (0..count) %}
+{{ i }}
+
+$.getJSON(repo_json_array[{{ i }}],function(dataP){
+langName[{{i}}] = [];
+langBytes[{{i}}] = [];
+  $.each(dataP, function(key, value){
+    langName[{{i}}].push(key);
+    langBytes[{{i}}].push(value);
+  });
+  var graphData = {
+    datasets: [{
+      data: langBytes[{{i}}]
+    }],
+    labels: langName[{{i}}]
+  };
+  var myDoughnutChart = new Chart(rep_name_array[{{i}}] , {
+    type: 'doughnut',
+    data: graphData,
+  });
+  console.log( langBytes[{{i}}] );
+  console.log( langName[{{i}}]);
+
+});
+
+{% endfor %}
+
+
+//graph
+/*var ctx = rep_name;
+var graphData =  {
+  datasets: [{
+      data: [10, 20, 30]
+  }],
+  labels: [
+      'Red',
+      'Yellow',
+      'Blue'
+  ]};
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: graphData,
+}); */
+//graph end
+
+</script>

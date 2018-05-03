@@ -2,38 +2,21 @@
 layout: default
 ---
 
-<div class="home">
+<div class="container">
 
-  <img src="{{site.github.owner_gravatar_url}}" alt="Profile pic" >
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
+    <div class="banner_main jumbotron" style="color: white;">
+      <div class="container">
+        <h1>Hello!</h1>
+        <p>This is my githup pages site</p>
+        <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
 
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<h1 class="page-heading">Latest Projects</h1>
+<a href="/projects"> View all Projects > </a>
+<div class="row" id="proj-display">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-<h1 class="page-heading">Projects</h1>
-<ul class="post-list">
-  {% for repository in site.github.public_repositories %}
-  <li>
-
-    <span class="post-meta">{{  date: ""%b %-d, %Y"" }}</span>
-
-    <h2>
-      <a class="post-link" href="{{ repository.html_url | prepend:site.baseurl }}">{{ repository.name | escape }}</a>
-    </h2>
-  </li>
-{% endfor %}
-</ul>
+</div>
 
 </div>

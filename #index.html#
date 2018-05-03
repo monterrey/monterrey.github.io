@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="container">
+
+
+
+<h1 class="page-heading">Latest Projects</h1>
+<a href="#"> View all Projects > </a>
+<div class="row" id="proj-display">
+
+</div>
+
+</div>
