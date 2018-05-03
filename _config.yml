@@ -18,7 +18,8 @@ email: luis13lopez@live.com
 description: >
   Github Pages Website dedicated to my blog and documenting my projects
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+#url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+url: "monterrey.github.io"
 twitter_username: notafashy
 github_username:  monterrey
 
